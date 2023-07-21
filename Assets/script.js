@@ -7,8 +7,21 @@ var specialChar = "!@#$%^&*()";
 var possibleChoices = [];
 
 function generatePassword() {
-window.prompt("Select how many characters you wish your password to be. You may choose between 8 and 128 characters in length.")
+var passLength = window.prompt("Select how many characters you wish your password to be. You may choose between 8 and 128 characters in length.")
+if (passLength < 8 || passLength > 128) {
+window.alert("Please select a number between 8 and 128.");
+generatePassword()
+}
+else {
+  alert("Password confirmed for " + passLength + "characters in length.")
+}
 };
+
+
+
+// function selectChars() {
+// if window.confirm("Would you like to include lowercase characters?")
+// };
 
 // Write password to the #password input
 function writePassword() {
