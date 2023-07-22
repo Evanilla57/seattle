@@ -7,42 +7,40 @@ var specialChar = "!@#$%^&*()".split("");
 var possibleChoices = [];
 
 function generatePassword() {
-var passLength = window.prompt("Select how many characters you wish your password to be. You may choose between 8 and 128 characters in length.")
-if (passLength < 8 || passLength > 128) {
-window.alert("Please select a number between 8 and 128.");
-generatePassword();
-}
-else {
-  alert("Password confirmed for " + passLength + " characters in length.");
-  selectChars();
-  password = randomizer(passLength);
-  window.alert("Congratulations! A " + passLength + " length password has been generated for you!");
-}
-return password
+  var passLength = window.prompt("Select how many characters you wish your password to be. You may choose between 8 and 128 characters in length.")
+  if (passLength < 8 || passLength > 128) {
+    window.alert("Please select a number between 8 and 128.");
+    generatePassword();
+  }
+  else {
+    alert("Password confirmed for " + passLength + " characters in length.");
+    selectChars();
+    password = randomizer(passLength);
+    window.alert("Congratulations! A " + passLength + " length password has been generated for you!");
+  }
+  return password
 };
 
 function selectChars() {
   possibleChoices = [];
-if (window.confirm("Would you like to include lowercase characters?")) {
-  possibleChoices = possibleChoices.concat(lowerCase);
-}
-if (window.confirm("Would you like to include uppercase characters?")) {
-  possibleChoices = possibleChoices.concat(upperCase);
-}
-if (window.confirm("Would you like to include numbers?")) {
-  possibleChoices = possibleChoices.concat(numbers);
-}
-if (window.confirm("Would you like to include special characters?")) {
-  possibleChoices = possibleChoices.concat(specialChar);
-}  
+  if (window.confirm("Would you like to include lowercase characters?")) {
+    possibleChoices = possibleChoices.concat(lowerCase);
+  }
+  if (window.confirm("Would you like to include uppercase characters?")) {
+    possibleChoices = possibleChoices.concat(upperCase);
+  }
+  if (window.confirm("Would you like to include numbers?")) {
+    possibleChoices = possibleChoices.concat(numbers);
+  }
+  if (window.confirm("Would you like to include special characters?")) {
+    possibleChoices = possibleChoices.concat(specialChar);
+  }  
 };
 
 function randomizer(passLength) {
   var password = "";
   for (var i = 0; i < passLength; i++) {
-    password += possibleChoices[Math.floor(Math.random() * possibleChoices.length
-      )
-    ];
+    password += possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
   }
   return password
 };
