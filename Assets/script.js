@@ -14,10 +14,10 @@ function generatePassword() {
   }
   else {
     selectChars();
-    password = randomizer(passLength);
+    retVal = randomizer(passLength);
     window.alert("Congratulations! A " + passLength + " character length password has been generated for you!");
   }
-  return password
+  return retVal
 };
 
 function selectChars() {
@@ -37,11 +37,11 @@ function selectChars() {
 };
 
 function randomizer(passLength) {
-  var password = "";
+  var retVal = "";
   for (var i = 0; i < passLength; i++) {
-    password += possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
+    retVal += possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
   }
-  return password
+  return retVal
 };
 
 // Write password to the #password input
