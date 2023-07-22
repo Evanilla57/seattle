@@ -16,7 +16,8 @@ else {
   alert("Password confirmed for " + passLength + " characters in length.");
   selectChars();
   password = randomizer(passLength);
-} console.log(password);
+  window.alert("Congratulations! A " + passLength + "length password has been generated for you!");
+}
 return password
 };
 
