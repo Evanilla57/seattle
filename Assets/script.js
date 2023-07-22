@@ -13,7 +13,6 @@ function generatePassword() {
     generatePassword();
   }
   else {
-    alert("Password confirmed for " + passLength + " characters in length.");
     selectChars();
     password = randomizer(passLength);
     window.alert("Congratulations! A " + passLength + " character length password has been generated for you!");
