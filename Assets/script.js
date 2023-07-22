@@ -33,6 +33,16 @@ if (window.confirm("Would you like to include special characters?")) {
 }  
 };
 
+function randomizer(passLength) {
+  var password = "";
+  for (var i = 0; i < passLength; i++) {
+    password += possibleChoices[Math.floor(Math.random() * possibleChoices.length
+      )
+    ];
+  }
+  return password
+};
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
