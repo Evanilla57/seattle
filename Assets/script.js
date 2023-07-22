@@ -24,10 +24,19 @@ var conSpecialChar = confirm("Click OK to include special characters in your pas
 
 
 function selectChars() {
-if (window.confirm("Would you like to include lowercase characters?") {
-
+  possibleChoices = [];
+if (window.confirm("Would you like to include lowercase characters?")) {
+  possibleChoices = possibleChoices.concat(lowerCase);
 }
-)
+if (window.confirm("Would you like to include uppercase characters?")) {
+  possibleChoices = possibleChoices.concat(upperCase);
+}
+if (window.confirm("Would you like to include numbers?")) {
+  possibleChoices = possibleChoices.concat(numbers);
+}
+if (window.confirm("Would you like to include special characters?")) {
+  possibleChoices = possibleChoices.concat(specialChar);
+}  
 };
 
 // Write password to the #password input
