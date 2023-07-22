@@ -33,6 +33,10 @@ function selectChars() {
   }
   if (window.confirm("Would you like to include special characters?")) {
     possibleChoices = possibleChoices.concat(specialChar);
+  }
+  else {
+    window.alert("You must select at least one option.")
+    selectChars();
   }  
 };
 
