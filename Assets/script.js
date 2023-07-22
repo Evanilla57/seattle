@@ -14,6 +14,8 @@ generatePassword();
 }
 else {
   alert("Password confirmed for " + passLength + " characters in length.");
+  selectChars();
+  randomizer(passLength);
 }
 };
 
