@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCase = "qwertyuiopasdfghjklzxcvbnm";
-var upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM";
-var numbers = "1234567890";
-var specialChar = "!@#$%^&*()";
+var lowerCase = "qwertyuiopasdfghjklzxcvbnm".split("");
+var upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
+var numbers = "1234567890".split("");
+var specialChar = "!@#$%^&*()".split("");
 var possibleChoices = [];
 
 function generatePassword() {
@@ -23,9 +23,12 @@ var conNumbers = confirm("Click OK to include numbers in your password. Click Ca
 var conSpecialChar = confirm("Click OK to include special characters in your password. Click Cancel to exclude special characters.");
 
 
-// function selectChars() {
-// if window.confirm("Would you like to include lowercase characters?")
-// };
+function selectChars() {
+if (window.confirm("Would you like to include lowercase characters?") {
+
+}
+)
+};
 
 // Write password to the #password input
 function writePassword() {
