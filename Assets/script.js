@@ -13,7 +13,7 @@ window.alert("Please select a number between 8 and 128.");
 generatePassword();
 }
 else {
-  alert("Password confirmed for " + passLength + "characters in length.");
+  alert("Password confirmed for " + passLength + " characters in length.");
 }
 };
 
@@ -21,6 +21,7 @@ var conLowerCase = confirm("Click OK to include lowercase characters in your pas
 var conUpperCase = confirm("Click OK to include uppercase characters in your password. Click Cancel to exclude uppercase characters.");
 var conNumbers = confirm("Click OK to include numbers in your password. Click Cancel to exclude numbers.");
 var conSpecialChar = confirm("Click OK to include special characters in your password. Click Cancel to exclude special characters.");
+
 
 // function selectChars() {
 // if window.confirm("Would you like to include lowercase characters?")
