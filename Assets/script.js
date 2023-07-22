@@ -15,8 +15,9 @@ generatePassword();
 else {
   alert("Password confirmed for " + passLength + " characters in length.");
   selectChars();
-  randomizer(passLength);
-}
+  password = randomizer(passLength);
+} console.log(password);
+return password
 };
 
 function selectChars() {
