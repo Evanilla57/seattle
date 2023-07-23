@@ -1,9 +1,11 @@
-// Assignment Code
+// generateBtn variable tied to button
 var generateBtn = document.querySelector("#generate");
+// Variables for each type of character
 var lowerCase = "qwertyuiopasdfghjklzxcvbnm".split("");
 var upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
 var numbers = "1234567890".split("");
 var specialChar = "!@#$%^&*()".split("");
+//variable for array of selected characters
 var possibleChoices = [];
 
 function generatePassword() {
@@ -20,8 +22,10 @@ function generatePassword() {
   return retVal
 };
 
+// Prompt user to select character types to be included in password
 function selectChars() {
   possibleChoices = [];
+  // Each prompt asks user to confirm or cancel the inclusion of specific character types
   if (window.confirm("Would you like to include lowercase characters?")) {
     possibleChoices = possibleChoices.concat(lowerCase);
   }
@@ -34,12 +38,14 @@ function selectChars() {
   if (window.confirm("Would you like to include special characters?")) {
     possibleChoices = possibleChoices.concat(specialChar);
   }
+  // If no selections are made, user is notified and sent back to the first selection prompt
   else {
     window.alert("You must select at least one option.")
     selectChars();
   }  
 };
 
+// Randomize order of characters within generated password
 function randomizer(passLength) {
   var retVal = "";
   for (var i = 0; i < passLength; i++) {
