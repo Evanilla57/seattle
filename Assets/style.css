@@ -1,9 +1,11 @@
+/* Universal Selector */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Elements for HTML, Body, Main Div, and Header */
 html,
 body,
 .wrapper {
@@ -30,6 +32,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Styling for Main Card */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -72,6 +75,7 @@ header {
   clear: both;
 }
 
+/* Styling for Button of Password Generator */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +101,7 @@ button[disabled] {
   float: right;
 }
 
+/* Text Area of Password Generator */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +123,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Media Queries to Resize Button and Text Box Based on Screen Size */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

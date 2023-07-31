@@ -5,20 +5,28 @@ var lowerCase = "qwertyuiopasdfghjklzxcvbnm".split("");
 var upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
 var numbers = "1234567890".split("");
 var specialChar = "!@#$%^&*()".split("");
-//variable for array of selected characters
+// Variable for array of selected characters
 var possibleChoices = [];
 
+//function to create password
 function generatePassword() {
+  // Set variable to create prompt for user to select number of desired characters in password length
   var passLength = window.prompt("Select how many characters you wish your password to be. You may choose between 8 and 128 characters in length.")
+  // Created if statement to alert user to select a different number if they do not select between 8 and 128 characters
   if (passLength < 8 || passLength > 128) {
     window.alert("Please select a number between 8 and 128.");
+    // After alert, user will be sent back to prompt to select a valid number of characters
     generatePassword();
   }
+  // Else statement will initiate function to ask user which characters they wish to use in password
   else {
     selectChars();
-    retVal = randomizer(passLength);
+    // Created variable for function that randomizes selected characters
+    var retVal = randomizer(passLength);
+    // User is alerted that a password has successfully been created
     window.alert("Congratulations! A " + passLength + " character length password has been generated for you!");
   }
+  // Randomized password is returned
   return retVal
 };
 
