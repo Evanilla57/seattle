@@ -35,8 +35,8 @@ THEN the password is either displayed in an alert or written to the page
 ![Screenshot of webpage with a random password generator at the center](Assets/Images/seattle-website.png)
 
 ## Links
-Deployed Webpage: 
-GitHub Repo Page: 
+Deployed Webpage: https://evanilla57.github.io/seattle/
+GitHub Repo Page: https://github.com/Evanilla57/seattle
 
 ## Credits
 
