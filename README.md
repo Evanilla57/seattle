@@ -40,7 +40,7 @@ GitHub Repo Page:
 
 ## Credits
 
-- N/A
+- Starting Code provided by Coding Boot Camp - UCR Extension
 
 ## License
 
